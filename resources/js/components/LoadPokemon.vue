@@ -21,9 +21,9 @@
         <p class="card-text">{{pokemon.type}}</p>
         </div>
         <div class="card-footer text-white">
-            <span class="fa fa-star" @click="sendReaction(pokemon.id,'favorite')"></span>
-            <span class="fa fa-thumbs-up" @click="sendReaction(pokemon.id, 'like')"></span>
-            <span class="fa fa-thumbs-down"  @click="sendReaction(pokemon.id, 'hate')"></span>
+            <span class="fa fa-star" @click="sendReaction(pokemon,'favorite')"></span>
+            <span class="fa fa-thumbs-up" @click="sendReaction(pokemon, 'like')"></span>
+            <span class="fa fa-thumbs-down"  @click="sendReaction(pokemon, 'hate')"></span>
         </div>
     </div>
     <div>
@@ -91,9 +91,9 @@
                     console.log(error);
                 });
             },
-            async sendReaction(id, reaction)
+            async sendReaction(data, reaction)
             {
-                const data = this.pokemonList.find(pokemon => pokemon.id === id);
+                //const data = this.pokemonList.find(pokemon => pokemon.id === id);
                 const request = {
                     id: data.id,
                     pokemon: data.name,
