@@ -1,0 +1,16 @@
+@extends('layouts.master')
+
+@push('styles')
+@endpush
+
+@section('title', 'Home')
+
+@section('content')
+    {{-- <search-component></search-component> --}}
+    <pokemon-component></pokemon-component>
+@endsection
+
+
+@section('script')
+
+@endsection
