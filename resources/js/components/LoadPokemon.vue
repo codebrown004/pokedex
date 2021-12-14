@@ -112,6 +112,7 @@
                     else
                     {
                         this.message = result.data.success
+                        this.error_msg = false;
                     }
                     // this.notif = false;
 
